@@ -24,12 +24,47 @@ const BlurText = ({
   easing = (t) => t,
   onAnimationComplete,
   stepDuration = 0.35,
+  animateOnMount = false,
 }) => {
-  const elements = animateBy === "words" ? text.split(" ") : text.split("");
+  const elements = useMemo(() => {
+    if (animateBy !== "words") {
+      return text.split("").map(char => ({ word: char, punctuation: "", isItalic: false }));
+    }
+    let inItalic = false;
+    return text.split(" ").map((word) => {
+      let currentItalic = inItalic;
+      let cleanWord = word;
+      let punctuation = "";
+
+      if (cleanWord.startsWith("*")) {
+        cleanWord = cleanWord.slice(1);
+        inItalic = true;
+        currentItalic = true;
+      }
+
+      const trailingMatch = cleanWord.match(/^(.*?)\*([.,\/#!$%\^&\*;:{}=\-_`~()]*)$/);
+      if (trailingMatch) {
+        cleanWord = trailingMatch[1];
+        punctuation = trailingMatch[2];
+        inItalic = false;
+      }
+
+      return {
+        word: cleanWord,
+        punctuation,
+        isItalic: currentItalic,
+      };
+    });
+  }, [text, animateBy]);
+
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
+    if (animateOnMount) {
+      setInView(true);
+      return;
+    }
     if (!ref.current) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -42,13 +77,13 @@ const BlurText = ({
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, animateOnMount]);
 
   const defaultFrom = useMemo(
     () =>
       direction === "top"
-        ? { filter: "blur(10px)", opacity: 0, y: -50 }
-        : { filter: "blur(10px)", opacity: 0, y: 50 },
+         ? { filter: "blur(10px)", opacity: 0, y: -50 }
+         : { filter: "blur(10px)", opacity: 0, y: 50 },
     [direction]
   );
 
@@ -90,12 +125,12 @@ const BlurText = ({
               index === elements.length - 1 ? onAnimationComplete : undefined
             }
           >
-            {segment.split(/(\*[^*]+\*)/g).map((part, i) => {
-              if (part.startsWith('*') && part.endsWith('*')) {
-                return <span key={i} className="font-serif italic text-white/90">{part.slice(1, -1)}</span>;
-              }
-              return part;
-            })}&nbsp;
+            {segment.isItalic ? (
+              <span className="font-serif italic text-white/90">{segment.word}</span>
+            ) : (
+              segment.word
+            )}
+            {segment.punctuation}&nbsp;
           </motion.span>
         );
       })}
