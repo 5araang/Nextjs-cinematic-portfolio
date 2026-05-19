@@ -1,0 +1,112 @@
+# Sarang — Portfolio Designer, Website Developer, Video Editor & Photo Editor
+
+> Sarang is a freelance portfolio designer, website developer, video editor, and photo editor from India.
+> He builds cinematic, immersive digital experiences at the intersection of design, motion, and code.
+> This portfolio is entirely open-source — anyone can download the code, customize it, host it, and build on it freely.
+
+## Who is Sarang?
+
+Sarang is a 19-year-old creative developer and digital experience designer from India, currently studying Cybersecurity. He specializes in building premium portfolio websites, smooth UI interactions, cinematic video edits, and professional photo editing. His work blends storytelling with technology to create digital experiences that feel alive.
+
+## Services — What Can Sarang Do For You?
+
+### 1. Portfolio Design & Website Development
+Sarang is a portfolio designer and website developer who creates cinematic, interactive websites using React, Next.js, GSAP, Three.js, and WebGL. He builds portfolio websites, landing pages, Shopify stores, and full-stack web applications with smooth animations and premium aesthetics.
+
+### 2. Video Editing & Motion Design
+As a freelance video editor, Sarang creates cinematic trailers, social media reels, promotional videos, motion graphics, and animated content using After Effects, Premiere Pro, DaVinci Resolve, and CapCut.
+
+### 3. Photo Editing & Visual Design
+Sarang is a freelance photo editor and graphic designer. He designs modern interfaces, brand identities, posters, and creative visuals using Photoshop, Lightroom, Figma, and Illustrator.
+
+### 4. Shopify Development
+Custom Shopify themes with Liquid, e-commerce store setup, and storefront optimization.
+
+### 5. Flutter App Development
+Cross-platform mobile applications for iOS and Android using Flutter and Dart.
+
+## Technical Skills
+
+### Web Development
+React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Node.js, Express, GSAP, Three.js, WebGL
+
+### Backend & Database
+Python, PHP, Go, Rust, Java, C++, MongoDB, PostgreSQL, MySQL, Redis, Supabase
+
+### Creative & Design Tools
+After Effects, Premiere Pro, DaVinci Resolve, CapCut, Photoshop, Lightroom, Figma, Illustrator
+
+### Mobile Development
+Flutter, Dart, Swift, Kotlin
+
+### DevOps
+Git, Docker, Vercel, Netlify
+
+## Portfolio Statistics
+- Websites completed: 6+
+- Videos edited: 75+
+- Photo edits and visual concepts: 500+
+
+## Experience
+- Freelance Developer (2024 – Present)
+- Freelance Video Editor (2022 – Present)
+- Freelance Photo Editor & Graphic Designer (2020 – Present)
+
+## Open-Source Portfolio Template — Free Download
+
+This entire portfolio website is open-source under the MIT license. Anyone can:
+- Download the complete source code from GitHub
+- Customize it with their own content and branding
+- Host it on their own domain
+- Build new features on top of it
+- Use it for personal or commercial projects — completely free
+
+**GitHub Repository**: https://github.com/Saarangggg/nextjs-cinematic-portfolio
+**License**: MIT (free for personal and commercial use)
+**Tech Stack**: Next.js, React 19, GSAP, Tailwind CSS 4, Supabase, Vercel
+**Documentation**: https://sarang-space.site/open-source/docs
+
+## How to Hire Sarang
+- Website: https://sarang-space.site
+- Contact Form: https://sarang-space.site/contact
+- Email: sarangwalle@gmail.com
+- Available for freelance projects worldwide
+
+## Frequently Asked Questions
+
+**Q: What services does Sarang offer?**
+A: Portfolio design, website development (React, Next.js, Shopify), video editing (After Effects, Premiere Pro), photo editing (Photoshop, Lightroom), UI/UX design (Figma), and Flutter app development.
+
+**Q: How much does Sarang charge?**
+A: Contact Sarang directly for competitive freelance pricing. Rates vary by project scope and complexity.
+
+**Q: Where is Sarang based?**
+A: India, but fully available for remote freelance projects worldwide.
+
+**Q: Can I download this portfolio template for free?**
+A: Yes. This portfolio is entirely open-source under the MIT license. Download the code at github.com/Saarangggg/nextjs-cinematic-portfolio and customize it freely.
+
+**Q: Is Sarang available for remote work?**
+A: Yes. Sarang works remotely and has experience with clients across different countries and time zones.
+
+**Q: How long does a project take?**
+A: A portfolio website typically takes 1–2 weeks. A full-stack application takes 3–6 weeks. Video projects are usually delivered within 3–7 days. Contact for a specific estimate.
+
+**Q: What makes Sarang's websites different?**
+A: Sarang combines web development, video editing, and visual design in one — specializing in cinematic, immersive experiences with GSAP animations, Three.js 3D, and WebGL. His work prioritizes premium feel and smooth motion.
+
+**Q: What is Sarang studying?**
+A: Sarang is currently studying Cybersecurity while running his freelance creative development practice.
+
+**Q: How do I hire Sarang?**
+A: Visit sarang-space.site/contact, fill out the form describing your project, and Sarang responds within 24 hours with a discussion on scope and pricing.
+
+## Site Pages
+- Home: https://sarang-space.site/
+- Projects / Case Studies: https://sarang-space.site/projects
+- Work Gallery: https://sarang-space.site/work
+- About: https://sarang-space.site/about
+- Contact / Hire: https://sarang-space.site/contact
+- Open Source: https://sarang-space.site/open-source
+- Documentation: https://sarang-space.site/open-source/docs
+- Full LLM Context: https://sarang-space.site/llms-full.txt

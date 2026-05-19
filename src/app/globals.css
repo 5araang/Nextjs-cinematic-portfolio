@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+:root {
+  --orange: #ff6b1a;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Hide native cursor only on real pointer (mouse) devices, not touch */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+  .admin-cursor, .admin-cursor * { cursor: default !important; }
+  .admin-cursor a, .admin-cursor button, .admin-cursor input, .admin-cursor select, .admin-cursor textarea { cursor: pointer !important; }
+  .admin-cursor input[type="text"], .admin-cursor input[type="password"], .admin-cursor textarea { cursor: text !important; }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #080808;
+  color: #fff;
+  font-family: var(--font-inter), "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar { display: none; }
+
+::selection {
+  background: var(--orange);
+  color: #000;
+}
+
+::-moz-selection {
+  background: var(--orange);
+  color: #000;
+}
+
+/* ── Ghost serif — Playfair italic outline, zero fill ──────────── */
+.ghost {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+  letter-spacing: -0.01em;
+}
+
+/* Coloured variant (e.g. Contact "Connect") */
+.ghost-orange {
+  font-family: var(--font-playfair), "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: transparent;
+  -webkit-text-stroke: 1.2px #ff6b1a;
+  letter-spacing: -0.01em;
+}
+
+.glass-cursor--hover {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.04;
+  will-change: transform;
+  contain: strict;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Custom slim scrollbar for dropdowns & panels ─────────────── */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 26, 0.4) transparent;
+}
+.custom-scroll::-webkit-scrollbar { width: 4px; }
+.custom-scroll::-webkit-scrollbar-track { background: transparent; }
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 26, 0.35);
+  border-radius: 99px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 26, 0.65);
+}
+
+/* Admin panel scrollbar */
+.admin-cursor { scrollbar-width: thin; scrollbar-color: rgba(255,107,26,0.3) transparent; }
+.admin-cursor::-webkit-scrollbar { width: 4px; }
+.admin-cursor::-webkit-scrollbar-track { background: transparent; }
+.admin-cursor::-webkit-scrollbar-thumb { background: rgba(255,107,26,0.3); border-radius: 99px; }
+
+/* ── Bottom blur fade — masks bottom edge of page ─────────────── */
+.bottom-blur {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 40;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(8, 8, 8, 0.6) 50%,
+    rgba(8, 8, 8, 0.95) 100%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  mask-image: linear-gradient(to bottom, transparent, black 60%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 60%);
+}
+
+/* ── Footer fade-up on scroll into view ───────────────────────── */
+.footer-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.footer-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Screen-reader only (crawlable but visually hidden) ──────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Utilities to remove inline styles ──────── */
+.hero-clamp-text {
+  font-size: clamp(5rem, 15vw, 13rem);
+}
+
+.hero-perspective {
+  perspective: 1000px;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Admin Layout System ── */
+.admin-sidebar {
+  width: 240px !important;
+  display: flex !important;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.admin-main {
+  margin-left: 240px !important;
+  transition: margin-left 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Sidebar label layout transition support */
+.sidebar-label {
+  display: inline-block;
+  max-width: 200px;
+  opacity: 1;
+  transition: max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-in-out !important;
+  white-space: nowrap;
+}
+
+/* Collapsed state on desktop (min-width: 768px) */
+@media (min-width: 768px) {
+  body.admin-collapsed .admin-sidebar {
+    width: 72px !important;
+  }
+  body.admin-collapsed .admin-main {
+    margin-left: 72px !important;
+  }
+  
+  /* Centering sidebar links when collapsed */
+  body.admin-collapsed .admin-sidebar .sidebar-link {
+    justify-content: center !important;
+    gap: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Hide labels and sub-text when collapsed */
+  body.admin-collapsed .admin-sidebar .sidebar-label,
+  body.admin-collapsed .admin-sidebar .sidebar-subtext {
+    opacity: 0 !important;
+    max-width: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Mobile responsive states (max-width: 767px) */
+@media (max-width: 767px) {
+  .admin-sidebar {
+    width: 260px !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    transform: translateX(-100%) !important;
+    z-index: 500 !important;
+    box-shadow: 20px 0 40px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  body.admin-mobile-open {
+    overflow: hidden !important; /* Disable scrolling when mobile menu open */
+  }
+
+  body.admin-mobile-open .admin-sidebar {
+    transform: translateX(0) !important;
+  }
+  
+  .admin-main {
+    margin-left: 0 !important;
+    padding-top: 80px !important;
+  }
+}
