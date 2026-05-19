@@ -57,11 +57,11 @@ export default function AboutPage() {
           <ProfileCard
             name="Sarang"
             title="Creative Developer & Designer"
-            handle="sarangwalle"
+            handle="sarang"
             status="Available for Projects"
             contactText="Hire Me"
-            avatarUrl="/photo/about me.webp"
-            miniAvatarUrl="/photo/about.webp"
+            avatarUrl="/photo/Sarang.png"
+            miniAvatarUrl="/photo/Sarang.png"
             showUserInfo={true}
             enableTilt={false}
             enableMobileTilt={false}
@@ -128,11 +128,11 @@ export default function AboutPage() {
           <ProfileCard
             name="Sarang"
             title="Creative Developer & Designer"
-            handle="sarangwalle"
+            handle="sarang"
             status="Available for Projects"
             contactText="Hire Me"
-            avatarUrl="/photo/about me.webp"
-            miniAvatarUrl="/photo/about.webp"
+            avatarUrl="/photo/Sarang.png"
+            miniAvatarUrl="/photo/Sarang.png"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
