@@ -42,7 +42,7 @@ const CATEGORIES = [
   },
   {
     num: "03",
-    label: "Video Design",
+    label: "Video",
     title: "Video & Motion Editing",
     description:
       "Cinematic reels, brand films, short-form content, and motion graphics that captivate and convert audiences.",
@@ -109,7 +109,7 @@ export default function Work() {
 
             {/* Category pills — decorative only */}
             <div className="flex flex-wrap gap-2 lg:pb-2">
-              {["All", "Website", "Photo / Poster Design", "Video Design"].map((cat) => (
+              {["Website", "Photo / Poster Design", "Video"].map((cat) => (
                 <Link
                   key={cat}
                   href={`/projects${cat !== "All" ? `?cat=${cat.toLowerCase().split(" ")[0]}` : ""}`}
