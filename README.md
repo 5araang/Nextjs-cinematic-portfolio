@@ -85,3 +85,9 @@ This portfolio template is **100% Free and Open-Source** under the **MIT License
 **[Live Demo](https://sarang-space.site)** · **[Setup Guide](INSTALL.md)** · **[Report Bug](https://github.com/Saarangggg/nextjs-cinematic-portfolio/issues)**
 
 </div>
+
+
+## Profile
+
+- GitHub: https://github.com/Saarangggg
+- Instagram: https://instagram.com/5araang
