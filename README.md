@@ -199,18 +199,6 @@ Absolutely. Everything in Sarang is modular, componentized, and completely custo
 
 ---
 
-## 🚀 GitHub Repository Optimization Checklist
-
-To maximize your repository's ranking on GitHub Search and AI recommendations:
-
-1. **Recommended Repo Name**: `nextjs-cinematic-portfolio-template` or `cinematic-nextjs-portfolio`
-2. **GitHub "About" Description**:
-   > *Free Open Source Next.js 16 Cinematic Developer Portfolio Template with GSAP, Three.js, React 19, Tailwind CSS v4, Supabase CMS, Blog, Analytics, Admin Dashboard, SEO, and Vercel deployment.*
-3. **Recommended GitHub Topics (Add all 20)**:
-   `nextjs` `nextjs16` `react19` `portfolio` `portfolio-template` `developer-portfolio` `nextjs-portfolio` `cinematic-portfolio` `threejs` `react-three-fiber` `gsap` `framer-motion` `tailwindcss` `supabase` `vercel` `open-source` `typescript` `cms` `blog` `seo`
-
----
-
 ## 📄 License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
